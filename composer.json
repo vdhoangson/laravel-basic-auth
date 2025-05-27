@@ -9,6 +9,12 @@
     "vdhoangson"
   ],
   "license": "MIT",
+  "authors": [
+    {
+      "name": "vdhoangson",
+      "email": "vdhoangson@gmail.com"
+    }
+  ],
   "require": {
     "php": "^8.1",
     "laravel/framework": "*"
