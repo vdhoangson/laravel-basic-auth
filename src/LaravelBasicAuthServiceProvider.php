@@ -22,6 +22,11 @@ class LaravelBasicAuthServiceProvider extends ServiceProvider
         $this->app->singleton('basic-auth', function () {
             return new BasicAuth;
         });
+
+        $this->mergeConfigFrom(
+            __DIR__ . '/../config/laravel-basic-auth.php',
+            'laravel-basic-auth'
+        );
     }
 
     /**
@@ -31,10 +36,9 @@ class LaravelBasicAuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->mergeConfigFrom(
-            __DIR__ . '/../config/laravel-basic-auth.php',
-            'laravel-basic-auth'
-        );
+        $this->publishes([
+            __DIR__ . '/../config/laravel-basic-auth.php' => config_path('laravel-basic-auth.php'),
+        ], 'laravel-basic-auth-config');
 
         $this->app['router']->aliasMiddleware('basic-auth', BasicAuth::class);
     }
