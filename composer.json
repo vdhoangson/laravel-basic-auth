@@ -1,0 +1,24 @@
+{
+  "name": "vdhoangson/laravel-basic-auth",
+  "type": "project",
+  "description": "The Laravel Basic Auth.",
+  "keywords": [
+    "basic-auth",
+    "laravel",
+    "authentication",
+    "vdhoangson"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^8.1",
+    "laravel/framework": "*"
+  },
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "Vdhoangson\\LaravelBasicAuth\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
