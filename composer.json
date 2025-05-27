@@ -25,6 +25,13 @@
       "Vdhoangson\\LaravelBasicAuth\\": "src/"
     }
   },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Vdhoangson\\LaravelBasicAuth\\LaravelBasicAuthServiceProvider"
+      ]
+    }
+  },
   "minimum-stability": "stable",
   "prefer-stable": true
 }
