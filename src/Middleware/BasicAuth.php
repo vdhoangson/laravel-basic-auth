@@ -19,7 +19,7 @@ class BasicAuth
 
         header('Cache-Control: no-cache, must-revalidate, max-age=0');
 
-        if ($request->getUser() === $username || $request->getPassword() === $password) {
+        if ($request->getUser() === $username && $request->getPassword() === $password) {
             return $next($request);
         }
 
